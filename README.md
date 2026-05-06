@@ -1,5 +1,9 @@
 # DarktableMCP
 
+<p align="center">
+  <img src="icon.png" alt="DarktableMCP Logo" width="160"/>
+</p>
+
 > Developed by [Yadullah Abidi (YaddyVirus)](https://github.com/YaddyVirus)
 
 A Model Context Protocol (MCP) server that lets you edit photos using Claude as your AI photo editor. Works with **Claude Desktop** and **Claude Code**.
