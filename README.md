@@ -101,7 +101,7 @@ Open the config file and add the `mcpServers` block. If the file already has con
 
 ### 3. Restart Claude Desktop
 
-Fully quit (don't just close the window) and reopen. The **darktable** server should appear when you click the 🔌 plug icon in the chat input.
+Fully quit (don't just close the window) and reopen. The **darktable** server should appear when you select Connectors in Claude Chat or Code.
 
 ---
 
