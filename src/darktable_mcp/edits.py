@@ -101,18 +101,14 @@ class EditState:
 
     def has_changes(self) -> bool:
         defaults = AdjustmentState()
-        a = self.adjustments
-        return any([
-            a.exposure_ev != defaults.exposure_ev,
-            a.contrast != defaults.contrast,
-            a.saturation != defaults.saturation,
-            a.temperature_kelvin is not None,
-            a.sharpness != defaults.sharpness,
-            a.noise_reduction != defaults.noise_reduction,
-            a.vignette != defaults.vignette,
-            self.crop is not None,
-            self.output_name is not None,
-        ])
+        return (
+            any(
+                getattr(self.adjustments, f) != getattr(defaults, f)
+                for f in vars(defaults)
+            )
+            or self.crop is not None
+            or self.output_name is not None
+        )
 
     def to_dict(self) -> dict:
         return {
